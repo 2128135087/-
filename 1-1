@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip> //必须包含这个头文件
+using namespace std;
+
+int main()
+
+{
+	//double a = 3.141596;
+	//cout << fixed << setprecision(3) << a << endl;  //输出小数点后3位
+	int t;
+	char c;
+	float number;
+	const float D = 6.2619;
+	const float E = 6.6744;
+	const float Y = 0.0516;
+	const float H = 0.8065;
+	const float* p1 = &D;
+	const float* p2 = &E;
+	const float* p3 = &Y;
+	const float* p4 = &H;
+	cin >> t;
+	for (int i = 0; i < t; i++) 
+	{
+		cin >> c;
+		cin >> number;
+		if (c == 'D') { cout <<fixed<<setprecision(4)<< (number * *p1)<<endl; }
+		else if (c == 'E') { cout << fixed << setprecision(4) << (number * *p2)<<endl; }
+		else if (c == 'Y') { cout << fixed << setprecision(4) << (number * *p3)<<endl; }
+		else if (c == 'H') { cout << fixed << setprecision(4) << (number * *p4)<<endl; }
+	}
+	return 0;
+}
